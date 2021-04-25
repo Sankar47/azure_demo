@@ -1,0 +1,28 @@
+
+<div class="container">
+  <div class="p-5 mb-4 rounded-3">
+    <div class="container-fluid py-5">
+      <div class="d-flex justify-content-between">
+        <h1 class="display-5 fw-bold">Clients</h1>
+        <%= link_to "+ Create Client", clients_new_path, class: "btn btn-success btn-sm my-3", method: :get %>
+        <%= link_to "Back", user_root_path, class: "btn btn-info btn-sm my-3", method: :get %>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Client ID</th>
+            <th>Client Token</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @clients.each do |client| %>
+            <tr>
+              <th><%= client.client_id %></th>
+              <td><%= truncate(client.client_token, length: 64) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

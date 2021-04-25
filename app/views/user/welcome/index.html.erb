@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <div class="d-flex justify-content-between">
+        <h1 class="display-5 fw-bold">User Signed In</h1>
+        <%= link_to "LogOut", destroy_user_session_path, class: "btn btn-danger btn-sm my-3", method: :delete %>
+      </div>
+      <div class="pt-3 text-center">
+        <%= link_to "Clients", clients_index_path, class: "btn btn-info btn-lg", method: :get %>
+      </div>
+    </div>
+  </div>
+</div>

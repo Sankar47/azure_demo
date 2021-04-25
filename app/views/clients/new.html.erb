@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="p-5 mb-4 rounded-3">
+    <div class="container-fluid py-5">
+      <div class="d-flex justify-content-between">
+        <h1 class="display-5 fw-bold">Add Client</h1>
+        <%= link_to "Back", clients_index_path, class: "btn btn-info btn-sm my-3", method: :get %>
+      </div>
+
+      <%= form_for(@client) do |f| %>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <%= f.text_field :email, class: "form-control", placeholder: 'enter email address' %>
+        </div>
+
+        <%= f.submit 'Create Client', class: 'btn btn-success' %>
+      <% end %>
+    </div>
+  </div>
+</div>
